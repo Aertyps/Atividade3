@@ -15,7 +15,8 @@ int main() {
   cout<<"Lado 2 : ";
   cin>>triangulo.lado2;
 
-  triangulo.hipotenusa();
+  cout<<"Lado 3 : ";
+  cin>>triangulo.lado3;
 
   do{
     cout<<"\n\nDigite o numero:\n";
@@ -49,7 +50,8 @@ int main() {
           cout<<"Lado 2 : ";
           cin>>triangulo.lado2;
 
-          triangulo.hipotenusa();
+          cout<<"Lado 3 : ";
+          cin>>triangulo.lado3;
 
         break;
       default:
