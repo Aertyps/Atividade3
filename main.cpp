@@ -1,5 +1,12 @@
 #include <iostream>
+#include "triangulos.cpp"
+
+using namespace std;
 
 int main() {
-  std::cout << "Hello World!\n";
+  tTriangulos triangulo;
+  triangulo.lado1 = 1.0;
+  triangulo.lado2 = 2.0;
+
+  triangulo.hipotenusa();
 }
