@@ -20,7 +20,7 @@ struct tTriangulos{
   }
 
   void mostrarArea(){
-    
+    cout<<"A area do triangulo é : " <<((lado1*lado2)/2);
   }
 
 };
