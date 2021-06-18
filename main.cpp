@@ -48,14 +48,14 @@ int main() {
 
           cout<<"Lado 2 : ";
           cin>>triangulo.lado2;
-          
+
           triangulo.hipotenusa();
 
         break;
       default:
         cout<<"Opcao nao programada";
         
-}
+    }
 
   }while(opcao != 0);
   
