@@ -7,8 +7,8 @@ int main() {
   int opcao = 0;
   tTriangulos triangulo;
 
-  cout<<"\n\nInforme os lados do triangulo\n";
-
+  cout<<"\n\nInforme os lados do triangulo\n";//obs: se um lado = 1 e o outro lado = 2 a hipotenusa sera raiz de 5 dessa forma,
+                                              //o programa só funcionara corretamente inserindo no lugar da raiz de 5, 2.2360679 
   cout<<"Lado 1 : ";
   cin>>triangulo.lado1;
 
