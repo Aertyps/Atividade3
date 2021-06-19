@@ -8,14 +8,27 @@ struct tTriangulos{
   float lado3;
 
   float hipotenusa(){
-    if((lado1*lado1) == (lado2*lado2 + lado3*lado3)){
-      return sqrt((lado3*lado3)+(lado2*lado2));
+    float hipo = 0;
+    if((lado1*lado1) >= (lado2*lado2 + lado3*lado3)){
+       hipo = sqrt((lado3*lado3)+(lado2*lado2));
 
-    }else if((lado2*lado2) == (lado1*lado1 + lado3*lado3)){
-      return sqrt((lado1*lado1)+(lado3*lado3));
+       if(round(lado1) == round(hipo)){
+         return hipo;
+       }
 
-    }else if((lado3*lado3) == (lado2*lado2 + lado1*lado1)){
-      return sqrt((lado1*lado1)+(lado2*lado2));
+    }else if((lado2*lado2) >= (lado1*lado1 + lado3*lado3)){
+      hipo =  sqrt((lado1*lado1)+(lado3*lado3));
+
+      if(round(lado2) == round(hipo)){
+         return hipo;
+       }
+
+    }else if((lado3*lado3) >= (lado2*lado2 + lado1*lado1)){
+      hipo = sqrt((lado1*lado1)+(lado2*lado2));
+
+      if(round(lado3) == round(hipo)){
+         return hipo;
+       }
     }
     return -1;
 
@@ -44,13 +57,13 @@ struct tTriangulos{
 
     if(hipo != -1){
 
-      if(lado1 == hipo){
+      if(lado1 >= hipo){
       area = ((lado2*lado3)/2);
 
-      }else if(lado2 == hipo){
+      }else if(lado2 >= hipo){
         area = ((lado1*lado3)/2);
 
-      }else if(lado3 == hipo){
+      }else if(lado3 >= hipo){
         area = ((lado2*lado1)/2);
       }
        cout<<"\nA area do triangulo é : " <<area;
